@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Content Display</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Dynamic Content Display</h1>
+    <p class="intro">A simple JavaScript example for displaying and updating content without reloading the page.</p>
+
+    <section class="card">
+      <h2>Show and Hide Content</h2>
+      <button id="toggleButton" type="button">Show details</button>
+      <div id="details" class="hidden">
+        <p>This section is displayed or hidden when the button is clicked.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Read More</h2>
+      <p>
+        JavaScript makes websites interactive.
+        <span id="moreText" class="hidden"> It can change visible content instantly, so users do not need to reload the page.</span>
+      </p>
+      <button id="readMoreButton" type="button">Read more</button>
+    </section>
+
+    <section class="card">
+      <h2>Search and Filter</h2>
+      <label for="searchInput">Search topics</label>
+      <input id="searchInput" type="search" placeholder="Type JavaScript, CSS, or HTML" />
+      <div class="filters" aria-label="Topic filters">
+        <button class="filter-button active" type="button" data-filter="all">All</button>
+        <button class="filter-button" type="button" data-filter="javascript">JavaScript</button>
+        <button class="filter-button" type="button" data-filter="css">CSS</button>
+        <button class="filter-button" type="button" data-filter="html">HTML</button>
+      </div>
+      <ul id="topicList">
+        <li data-category="javascript">JavaScript: adds interactivity to a web page.</li>
+        <li data-category="css">CSS: styles the layout and visual design.</li>
+        <li data-category="html">HTML: provides the structure of a web page.</li>
+        <li data-category="javascript">JavaScript: responds to user actions and events.</li>
+      </ul>
+      <p id="noResults" class="hidden message">No matching topic found.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contact Form</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" />
+        <small id="nameError" class="error"></small>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" />
+        <small id="emailError" class="error"></small>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
