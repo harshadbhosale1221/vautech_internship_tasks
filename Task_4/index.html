@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive and accessible student learning page.">
+  <title>LearnSpace | Accessible Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <a class="brand" href="#home" aria-label="LearnSpace home">Learn<span>Space</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">LEARN AT YOUR PACE</p>
+        <h1 id="hero-title">Simple learning for everyone.</h1>
+        <p>Short, practical courses designed to help you build useful digital skills with confidence.</p>
+        <a class="button" href="#courses">Explore courses</a>
+      </div>
+    </section>
+
+    <section class="courses section" id="courses" aria-labelledby="courses-title">
+      <div class="section-heading">
+        <p class="eyebrow">POPULAR COURSES</p>
+        <h2 id="courses-title">Choose your next skill</h2>
+      </div>
+      <div class="course-grid">
+        <article class="course-card">
+          <h3>HTML Basics</h3>
+          <p>Learn how to structure clear, meaningful web pages.</p>
+          <a href="#contact" aria-label="Start the HTML Basics course">Start course <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="course-card">
+          <h3>CSS Essentials</h3>
+          <p>Create attractive layouts that work on any screen size.</p>
+          <a href="#contact" aria-label="Start the CSS Essentials course">Start course <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="course-card">
+          <h3>JavaScript Intro</h3>
+          <p>Add simple interactions and make your pages feel alive.</p>
+          <a href="#contact" aria-label="Start the JavaScript Intro course">Start course <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2 id="contact-title">Ready to begin?</h2>
+        <p>Send a message and we will help you choose the best course for your goals.</p>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
+          <p id="email-help" class="help-text">We will only use this to reply to you.</p>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 LearnSpace. Built for every learner.</p>
+  </footer>
+</body>
+</html>
